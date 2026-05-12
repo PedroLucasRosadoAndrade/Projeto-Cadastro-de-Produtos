@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="design.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Cadastro de Produtos</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="home.html">Inicial</a></li>
+            <li><a href="consultarEstoque.html">Estoque</a></li>
+            <li><a href="#">Cadastrar Produto</a></li>
+        </ul>
+    </nav>
+
+    <label for="">Nome</label>
+    <input id="nome" placeholder="Nome">
+    <label for="">Descrição</label>
+    <input id="descricao" placeholder="Descrição">
+    <label for="">Tipo</label>
+    <input id="tipo" placeholder="Tipo">
+    <label for="">Valor</label>
+    <input id="valor" placeholder="Valor">
+    <label for="">Quantidade</label>
+    <input id="quantidade" placeholder="Quantidade">
+
+
+    <button onclick="cadastrar()">Cadastrar</button>
+
+    <h3>Lista de Produtos</h3>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Valor</th>
+                <th>Quantidade</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="lista"></tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

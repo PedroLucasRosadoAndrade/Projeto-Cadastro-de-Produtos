@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Controle de Estoque</title>
+  <link rel="stylesheet" href="design.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Estoque Atual</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="home.html">Inicial</a></li>
+      <!-- <li><a href="consultarEstoque.html">Estoque</a></li> -->
+      <li><a href="cadastroProduto.html">Cadastrar Produto</a></li>
+      <li><a href="cadastrarDeve.html">Cadastrar Devedores</a></li>
+
+    </ul>
+  </nav>
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Valor</th>
+        <th>Quantidade</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody id="lista"></tbody>
+  </table>
+
+  <script src="estoque.js"></script>
+</body>
+
+</html>

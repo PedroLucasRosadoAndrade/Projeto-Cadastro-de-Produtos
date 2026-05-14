@@ -33,7 +33,15 @@ function cadastrar() {
             valor: valor.value,
             quantidade: quantidade.value
         })
+
+
     }).then(() => listar());
+
+    nome.value = '';
+    descricao.value = '';
+    tipo.value = '';
+    valor.value = '';
+    quantidade.value = '';
 }
 
 
@@ -78,3 +86,8 @@ if (window.location.pathname.includes('./cadastroProduto.html')) {
 if (window.location.pathname.includes('./consultarEstoque.html')) {
     carregarEstoque();
 }
+
+window.onload = () => {
+    listar();
+    setInterval(listar, 3000);
+};

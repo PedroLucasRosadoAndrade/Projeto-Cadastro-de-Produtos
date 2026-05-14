@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cssNota.css">
+    <link rel="stylesheet" href="design.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+     <header>
+        <h1>Nota de Serviço</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Inicial</a></li>
+            <li><a href="consultarEstoque.html">Estoque</a></li>
+            <li><a href="cadastroProduto.html">Cadastrar Produto</a></li>
+            <li><a href="cadastrarDeve.html">Cadastrar Devedores</a></li>
+            <li><a href="emitirNota.html">Emitir Nota</a></li>
+
+        </ul>
+    </nav>
+
+    <p><strong>Nota:</strong> <span id="nota"></span></p>
+    <p><strong>Cliente:</strong> <span id="cliente"></span></p>
+    <p><strong>Funcionário:</strong> <span id="funcionario"></span></p>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Qtd</th>
+                <th>Preço</th>
+                <th>Subtotal</th>
+            </tr>
+        </thead>
+        <tbody id="itens"></tbody>
+    </table>
+
+    <h2>Total: R$ <span id="total"></span></h2>
+
+    <button onclick="imprimir()">Imprimir</button>
+
+    <script src="nota.js"></script>
+</body>
+
+</html>

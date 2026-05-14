@@ -10,28 +10,29 @@
 
 <body>
     <header>
-        <h1>Cadastro de Dividas de Clientes</h1>
+        <h1>Cadastro de Servisos</h1>
     </header>
     <nav>
         <ul>
             <li><a href="home.html">Inicial</a></li>
             <li><a href="consultarEstoque.html">Estoque</a></li>
             <li><a href="cadastroProduto.html">Cadastrar Produto</a></li>
+            <li><a href="nota.html">Emitir Nota</a></li>
         </ul>
     </nav>
 
     <h1></h1>
-    <label for="">Nome</label>
-    <input id="nomeDe" placeholder="Baiano maua">
+    <label for="">Diagnostico</label>
+    <input id="diagnostico" placeholder="Baiano maua">
 
-    <label for="">CPF</label>
-    <input id="cpfDe" placeholder="000.000.000-00">
+    <label for="">Peças Trocadas</label>
+    <input id="pecaTroca" placeholder="000.000.000-00">
 
-    <label for="">Telefone</label>
-    <input id="telefone" placeholder="(00) 00000-00000">
+    <label for="">Placa Carro</label>
+    <input id="placa" placeholder="123 456">
 
-    <label for="">Valor</label>
-    <input id="valorDi" placeholder="00,00">
+    <label for="">Funcionário</label>
+    <input id="nomeFun" placeholder="00,00">
 
     <button onclick="cadastrarDev()">Cadastrar</button>
 
@@ -39,14 +40,14 @@
     <table border="1">
         <thead>
             <tr>
-                <th>Nome</th>
-                <th>CPF</th>
-                <th>TELEFONE</th>
+                <th>Diagnostico</th>
+                <th>Peças</th>
+                <th>Placa</th>
                 <th>VALOR</th>
-                <th>Ações</th>
+                <th>Funcionário</th>
             </tr>
         </thead>
-        <tbody id="listarDev"></tbody>
+        <tbody id="listarSer"></tbody>
     </table>
 
     <script src="devedores.js"></script>

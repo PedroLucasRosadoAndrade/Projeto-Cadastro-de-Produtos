@@ -59,7 +59,7 @@ id_fun_fk int,
 foreign key (id_fun_fk) references Funcionario(id_fun)
 );
 
-INSERT INTO Produto (nome_prod, descricao_prod, tipo_prod, valor_prod, quantidade_prod) VALUES ('penel', 'penel aro 18', 'penel trase', 25);
+#INSERT INTO Produto (nome_prod, descricao_prod, tipo_prod, valor_prod, quantidade_prod) VALUES ('penel', 'penel aro 18', 'penel trase', 25, 10);
 select * from Produto;
 
 create table ItemNota (
@@ -72,6 +72,18 @@ foreign key (id_not_fk) references NotaServico(id_not),
 id_prod_fk int,
 foreign key (id_prod_fk) references Produto(id_prod)
 );
+
+create table Devedores(
+id_dev int primary key auto_increment,
+nome_dev varchar(50),
+cpf_dev varchar(50),
+telefone_dev varchar(20),
+valorDivida_dev double
+);
+
+#insert into Devedores values(1, 'Baiano maua', '12345678910', '00000000000', 250);
+
+select * from Devedores;
 
 select id_not as Nota, nome_cli as Cliente, nome_fun as Funcionario, nome_prod as Produto, quantidade, preco_unitario, subtotal,valorTotal_not AS Total
 from NotaServico join Cliente on id_cli_fk = id_cli

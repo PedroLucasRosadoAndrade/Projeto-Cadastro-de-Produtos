@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="design.css">
-
+    <script src="config.js"></script>
     <title>Document</title>
 </head>
 
@@ -19,6 +19,7 @@
             <li><a href="consultarEstoque.html">Estoque</a></li>
             <li><a href="cadastroProduto.html">Cadastrar Produto</a></li>
             <li><a href="cadastrarDeve.html">Cadastrar Devedores</a></li>
+            <li><a href="cadastrarServiso.html">Cadastrar Serviso</a></li>
             <li><a href="nota.html">Emitir Nota</a></li>
 
         </ul>
@@ -44,14 +45,24 @@
 
             </article>
             <script src="devedores.js"></script>
+
+
+
             <article class="card">
-                <h2>Site web teste</h2>
-                <h5>Tags usadas:</h5>
-                <!-- <img src="imagens/download.jpg" alt="Tags usadas"> -->
-                <p>Sobre o Site:</p>
-                <p>
-                    essas são as TAGS usadas.
-                </p>
+                <h2>Servisos</h2>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Diagnostico</th>
+                            <th>Peca trocadas</th>
+                            <th>Placa</th>
+                            <th>Funcionário</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listarServ"></tbody>
+                </table>
+                <script src="serviso.js"></script>
             </article>
         </section>
         <!-- <aside>

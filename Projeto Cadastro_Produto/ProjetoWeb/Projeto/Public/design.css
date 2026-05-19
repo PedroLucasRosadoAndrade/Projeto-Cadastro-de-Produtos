@@ -1,5 +1,4 @@
-
-*{
+* {
     box-sizing: border-box;
 }
 
@@ -7,20 +6,20 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     background: #f1f1f1;
- }
+}
 
-header { 
+header {
     text-align: center;
     background-color: rgb(12, 93, 233);
     padding: 30px;
 }
 
-header h1{
+header h1 {
     font-size: 50px;
     color: white;
 }
 
-nav ul{
+nav ul {
     list-style-type: none;
     background: rgb(72, 73, 91);
     overflow: hidden;
@@ -28,27 +27,27 @@ nav ul{
     padding: 0;
 }
 
-nav a{
+nav a {
     color: white;
     text-decoration: none;
     padding: 16px;
     display: block;
 }
 
-nav li{
+nav li {
     float: left;
 }
 
-nav a:hover{
+nav a:hover {
     background-color: white;
-    color:rgb(136, 139, 193);
+    color: rgb(136, 139, 193);
 }
 
 img {
     width: 100%;
 }
 
-.row{
+.row {
     padding: 0 20px;
     display: table;
     width: 100%;
@@ -59,17 +58,22 @@ section {
     width: 75%;
 }
 
-aside{
+aside {
     float: left;
     width: 25%;
     padding-left: 20px;
-  
+
 }
 
 .card {
     background-color: white;
     padding: 20px;
     margin-top: 20px;
+}
+
+.idEtoque {
+    margin: 0 auto;
+    width: 50%;
 }
 
 footer {
@@ -81,24 +85,25 @@ footer {
     width: 100%;
 }
 
-footer dl, footer p {
+footer dl,
+footer p {
     display: table-cell;
     vertical-align: middle;
 }
 
-footer dt{
+footer dt {
     font-weight: bold;
 }
 
-footer dd{
+footer dd {
     margin-left: 0;
 }
 
-footer p{
+footer p {
     text-align: right;
     font-weight: bold;
     font-size: 25px;
-    
+
 }
 
 #Sobre h2 {
@@ -106,10 +111,10 @@ footer p{
     text-align: left;
     font-size: 30px;
     color: rgba(120, 120, 120, 1);
-    
+
 }
 
-#sobre p{
+#sobre p {
     font-family: 'Comic Sans', cursive;
     text-align: justify;
 }
@@ -172,20 +177,22 @@ html {
 }
 
 @media screen and (max-width: 768px) {
-    section, aside {
+
+    section,
+    aside {
         width: 100%;
         padding: 0;
     }
 }
 
 @media screen and (max-width: 768px) {
-    nav li{
+    nav li {
         float: none;
         text-align: center;
-        
+
     }
 }
 
-footer p{
+footer p {
     display: none;
 }

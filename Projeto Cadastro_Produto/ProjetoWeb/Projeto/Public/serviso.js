@@ -1,4 +1,4 @@
-const API = 'http://localhost:3601';
+// const API = 'http://localhost:3601';
 
 
 const diagnostico = document.getElementById('diagnostico');
@@ -7,7 +7,7 @@ const placa = document.getElementById('placa');
 const nomeFun = document.getElementById('nomeFun');
 
 // CREATE
-function cadastrarDev() {
+function cadastrarSer() {
     fetch(API + '/servisos', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -29,8 +29,8 @@ function cadastrarDev() {
             placa.value = '';
             nomeFun.value = '';
             diagnostico.focus();
-            
-            listarDev();
+
+            listarServ();
         })
         .catch(err => console.error('Erro ao cadastrar:', err));
 }
@@ -80,7 +80,7 @@ function excluir(idSe) {
 }
 
 
-window.onload = () => {
+window.addEventListener('load', () => {
     listarServ();
     setInterval(listarServ, 3000);
-};
+});

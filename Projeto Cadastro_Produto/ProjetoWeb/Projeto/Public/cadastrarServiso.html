@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 
@@ -23,34 +24,34 @@
 
     <h1></h1>
     <label for="">Diagnostico</label>
-    <input id="diagnostico" placeholder="Baiano maua">
+    <input id="diagnostico" placeholder="texto">
 
     <label for="">Peças Trocadas</label>
-    <input id="pecaTroca" placeholder="000.000.000-00">
+    <input id="pecaTroca" placeholder="Carborador">
 
     <label for="">Placa Carro</label>
-    <input id="placa" placeholder="123 456">
+    <input id="placa" placeholder="123-456">
 
     <label for="">Funcionário</label>
-    <input id="nomeFun" placeholder="00,00">
+    <input id="nomeFun" placeholder="Nome">
 
-    <button onclick="cadastrarDev()">Cadastrar</button>
+    <button onclick="cadastrarSer()">Cadastrar</button>
 
     <h1></h1>
     <table border="1">
         <thead>
             <tr>
+                <th>ID</th>
                 <th>Diagnostico</th>
                 <th>Peças</th>
                 <th>Placa</th>
-                <th>VALOR</th>
                 <th>Funcionário</th>
             </tr>
         </thead>
-        <tbody id="listarSer"></tbody>
+        <tbody id="listarServ"></tbody>
     </table>
 
-    <script src="devedores.js"></script>
+    <script src="serviso.js"></script>
 </body>
 
 </html>

@@ -179,6 +179,62 @@ app.delete('/servisos/:idSe', (req, res) => {
 
 
 
+// clientes 
+
+
+
+// CREATE
+
+app.post('/clientes', (req, res) => {
+  const { nomeCli, cpfCli, telefoneCli } = req.body;
+
+  db.query(
+    'INSERT INTO Cliente (nome_cli, cpf_cli, telefone_cli) VALUES (?, ?, ?)',
+    [nomeCli, cpfCli, telefoneCli],
+    (err, result) => {
+      if (err) {
+        console.log('ERRO SQL:', err);
+        return res.status(500).send('Erro ao cadastrar');
+      }
+
+      console.log('Inserido com ID:', result.insertId);
+      res.send('Divida cadastrada')
+    }
+  );
+});
+
+
+// LISTAR
+app.get('/clientes', (req, res) => {
+  db.query('SELECT * FROM Cliente', (err, result) => {
+    res.json(result);
+  });
+});
+
+
+// UPDATE
+app.put('/clientes/:idCli', (req, res) => {
+  const { idCli, nomeCli, cpfCli, telefoneCli } = req.body;
+
+  db.query(
+    'UPDATE Cliente SET nome_cli=?, cpf_cli=?, telefone_cli=? WHERE id_cli=?',
+    [nomeCli, cpfCli, telefoneCli, req.params.idCli],
+    () => res.send('Atualizado')
+  );
+});
+
+
+// DELETE
+app.delete('/clientes/:idCli', (req, res) => {
+  db.query(
+    'DELETE FROM Cliente WHERE id_cli=?',
+    [req.params.idDe],
+    () => res.send('Excluído')
+  );
+});
+
+
+
 // emitir nota 
 
 app.get('/nota/:id', (req, res) => {
@@ -211,5 +267,15 @@ app.get('/nota/:id', (req, res) => {
 });
 
 
+app.get('/nota', (req, res) => {
+  db.query(`
+    SELECT id_not, valorTotal_not, nome_cli 
+    FROM NotaServico 
+    INNER JOIN Cliente ON id_cli_fk = id_cli
+  `, (err, result) => {
+    if (err) return res.status(500).send(err);
+    res.json(result);
+  });
+});
 
 app.listen(3601, () => console.log('Servidor rodando na porta 3601'));

@@ -1,4 +1,4 @@
-// const API = 'http://localhost:3601';
+
 
 
 const nomeDe = document.getElementById('nomeDe');

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="design.css ">
+    <link rel="stylesheet" href="style.css">
+    <script src="config.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header><h1>Notas Emitidas</h1></header>
+
+    <nav>
+        <ul>
+            <li><a href="home.html">Inicial</a></li>
+            <li><a href="consultarEstoque.html">Estoque</a></li>
+            <li><a href="cadastroProduto.html">Cadastrar Produto</a></li>
+            <li><a href="cadastrarDeve.html">Cadastrar Devedores</a></li>
+            <li><a href="cadastrarServiso.html">Cadastrar Serviço</a></li>
+        </ul>
+    </nav>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Cliente</th>
+                <th>Total</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody id="listaNotas"></tbody>
+    </table>
+    <script src="listarNotas.js"></script>
+</body>
+
+</html>

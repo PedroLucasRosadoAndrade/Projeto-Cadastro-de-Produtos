@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="cssNota.css">
     <link rel="stylesheet" href="design.css">
+    <script src="config.js"></script>
     <title>Document</title>
 </head>
 
 <body>
 
-     <header>
+    <header>
         <h1>Nota de Serviço</h1>
     </header>
 
@@ -21,7 +22,8 @@
             <li><a href="consultarEstoque.html">Estoque</a></li>
             <li><a href="cadastroProduto.html">Cadastrar Produto</a></li>
             <li><a href="cadastrarDeve.html">Cadastrar Devedores</a></li>
-            <li><a href="emitirNota.html">Emitir Nota</a></li>
+            <!-- <li><a href="emitirNota.html">Emitir Nota</a></li> -->
+            <li><a href="listarNotas.html">Notas</a></li>
 
         </ul>
     </nav>
@@ -29,7 +31,8 @@
     <p><strong>Nota:</strong> <span id="nota"></span></p>
     <p><strong>Cliente:</strong> <span id="cliente"></span></p>
     <p><strong>Funcionário:</strong> <span id="funcionario"></span></p>
-
+    <span id="totalNota"></span>
+    
     <table border="1">
         <thead>
             <tr>

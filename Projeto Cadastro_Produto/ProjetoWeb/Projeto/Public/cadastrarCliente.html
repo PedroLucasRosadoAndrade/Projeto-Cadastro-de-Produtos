@@ -1,41 +1,40 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="design.css">
     <link rel="stylesheet" href="style.css">
-    
+    <script src="config.js"></script>
     <title>Document</title>
 </head>
 
 <body>
     <header>
-        <h1>Cadastro de Dividas de Clientes</h1>
+        <h1>Cadastro de Clientes</h1>
     </header>
     <nav>
         <ul>
             <li><a href="home.html">Inicial</a></li>
             <li><a href="consultarEstoque.html">Estoque</a></li>
             <li><a href="cadastroProduto.html">Cadastrar Produto</a></li>
+            <li><a href="nota.html">Emitir Nota</a></li>
         </ul>
     </nav>
 
     <h1></h1>
-    <label for="">Nome</label>
-    <input id="nomeDe" placeholder="Baiano maua">
+    <label for="=>Nome</label>
+    <input id="nomeCli" placeholder="texto">
 
-    <label for="">CPF</label>
-    <input id="cpfDe" placeholder="000.000.000-00">
+    <label for="=>CPF</label>
+    <input id="cpfCli" placeholder="000.000.000-00">
 
-    <label for="">Telefone</label>
-    <input id="telefone" placeholder="(00) 00000-00000">
+    <label for="=>Telefone</label>
+    <input id="telefoneCli" placeholder="69 000000000">
 
-    <label for="">Valor</label>
-    <input id="valorDi" placeholder="00,00">
 
-    <button onclick="cadastrarDev()">Cadastrar</button>
+    <button onclick="cadastrarCliente()">Cadastrar</button>
 
     <h1></h1>
     <table border="1">
@@ -44,16 +43,13 @@
                 <th>ID</th>
                 <th>Nome</th>
                 <th>CPF</th>
-                <th>TELEFONE</th>
-                <th>VALOR</th>
-                <th>Ações</th>
+                <th>Telefone</th>
             </tr>
         </thead>
-        <tbody id="listarDev"></tbody>
+        <tbody id="listarClie"></tbody>
     </table>
 
-    <script src="config.js"></script>
-    <script src="devedores.js"></script>
+    <script src="cadastrarCliente.js"></script>
 </body>
 
 </html>

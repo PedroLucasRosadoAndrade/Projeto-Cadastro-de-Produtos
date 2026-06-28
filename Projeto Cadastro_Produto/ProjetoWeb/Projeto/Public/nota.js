@@ -1,8 +1,13 @@
-const API = 'http://localhost:3601';
 
 // pegar ID da URL (?id=1)
 const params = new URLSearchParams(window.location.search);
-const id = params.get('id');
+const id = params.get('id');    
+
+
+if (!id) {
+    alert('Nota não informada!');
+    window.location.href = 'listarNotas.html';
+}
 
 function carregarNota() {
     fetch(API + '/nota/' + id)
@@ -30,6 +35,8 @@ function carregarNota() {
                     </tr>
                 `;
             });
+
+
 
             document.getElementById('itens').innerHTML = html;
         });

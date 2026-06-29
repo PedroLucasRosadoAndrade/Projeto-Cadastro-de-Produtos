@@ -9,7 +9,7 @@ app.use(express.static('public'));
 
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/public/login.html');
+  res.sendFile(__dirname + '/public/HTML/login.html');
 });
 
 // LOGIN
@@ -130,11 +130,11 @@ app.delete('/devedores/:idDe', (req, res) => {
 
 // CREATE
 app.post('/servisos', (req, res) => {
-  const { diagnostico, pecaTroca, placa, nomeFun } = req.body;
+  const { diagnostico, pecaTroca, placa, nomeFun, valorSer} = req.body;
 
   db.query(
-    'INSERT INTO Servico (diagnostico_ser, pecasTrocada_ser, placaCarro_ser, nome_fun) VALUES (?, ?, ?, ?)',
-    [diagnostico, pecaTroca, placa, nomeFun],
+    'INSERT INTO Servico (diagnostico_ser, pecasTrocada_ser, placaCarro_ser, nome_fun, valor_ser) VALUES (?, ?, ?, ?, ?)',
+    [diagnostico, pecaTroca, placa, nomeFun, valorSer],
     (err, result) => {
       if (err) {
         console.log('ERRO SQL:', err);
@@ -158,11 +158,11 @@ app.get('/servisos', (req, res) => {
 
 // UPDATE
 app.put('/servisos/:idSe', (req, res) => {
-  const { idSe, diagnostico, pecaTroca, placa, nomeFun } = req.body;
+  const { idSe, diagnostico, pecaTroca, placa, nomeFun, valorSer} = req.body;
 
   db.query(
-    'UPDATE Servico SET diagnostico_ser=?, pecasTrocada_ser=?, placaCarro_ser=?, nome_fun=? WHERE id_ser=?',
-    [diagnostico, pecaTroca, placa, nomeFun, req.params.idSe],
+    'UPDATE Servico SET diagnostico_ser=?, pecasTrocada_ser=?, placaCarro_ser=?, nome_fun=?, valor_ser=? WHERE id_ser=?',
+    [diagnostico, pecaTroca, placa, nomeFun, valorSer, req.params.idSe],
     () => res.send('Atualizado')
   );
 });

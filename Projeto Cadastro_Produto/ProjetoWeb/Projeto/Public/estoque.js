@@ -12,6 +12,7 @@ function listar() {
           <tr>
             <td>${p.id_prod}</td>
             <td>${p.nome_prod}</td>
+            <td>${p.descricao_prod}</td>
             <td>${p.valor_prod}</td>
             <td>${p.quantidade_prod}</td>
             <td>

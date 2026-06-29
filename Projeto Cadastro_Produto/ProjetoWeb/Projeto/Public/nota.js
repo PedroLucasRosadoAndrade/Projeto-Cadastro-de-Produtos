@@ -1,50 +1,35 @@
-
-// pegar ID da URL (?id=1)
 const params = new URLSearchParams(window.location.search);
-const id = params.get('id');    
+const id = params.get('id');
 
+fetch(API + '/servisos')
+    .then(res => res.json())
+    .then(data => {
 
-if (!id) {
-    alert('Nota não informada!');
-    window.location.href = 'listarNotas.html';
-}
+        const servico = data.find(s => s.id_ser == id);
 
-function carregarNota() {
-    fetch(API + '/nota/' + id)
-        .then(res => res.json())
-        .then(data => {
+        if (!servico) {
+            alert('Serviço não encontrado');
+            return;
+        }
 
-            if (data.length === 0) return;
+        document.getElementById('nota').innerText = servico.id_ser;
+        document.getElementById('placa').innerText = servico.placaCarro_ser;
+        document.getElementById('funcionario').innerText = servico.nome_fun;
 
-            // dados fixos (primeiro registro)
-            document.getElementById('nota').innerText = data[0].nota;
-            document.getElementById('cliente').innerText = data[0].cliente;
-            document.getElementById('funcionario').innerText = data[0].funcionario;
-            document.getElementById('total').innerText = data[0].total;
+        document.getElementById('total').innerText = servico.valor_ser;
 
-            // itens
-            let html = '';
+        let html = `
+            <tr>
+                <td>${servico.diagnostico_ser}</td>
+                <td>1</td>
+                <td>${servico.valor_ser}</td>
+                <td>${servico.valor_ser}</td>
+            </tr>
+        `;
 
-            data.forEach(item => {
-                html += `
-                    <tr>
-                        <td>${item.produto}</td>
-                        <td>${item.quantidade}</td>
-                        <td>${item.preco_unitario}</td>
-                        <td>${item.subtotal}</td>
-                    </tr>
-                `;
-            });
+        document.getElementById('itens').innerHTML = html;
+    });
 
-
-
-            document.getElementById('itens').innerHTML = html;
-        });
-}
-
-// imprimir
 function imprimir() {
     window.print();
 }
-
-window.onload = carregarNota;

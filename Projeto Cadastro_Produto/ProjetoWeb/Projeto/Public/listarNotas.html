@@ -7,11 +7,15 @@
     <link rel="stylesheet" href="design.css ">
     <link rel="stylesheet" href="style.css">
     <script src="config.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <title>Document</title>
 </head>
 
 <body>
-    <header><h1>Notas Emitidas</h1></header>
+    <header>
+        <h1>Notas Emitidas</h1>
+    </header>
 
     <nav>
         <ul>
@@ -23,18 +27,26 @@
         </ul>
     </nav>
 
-    <table border="1">
+    <table class="table table-dark table-striped">
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Cliente</th>
-                <th>Total</th>
+                <th>Diagnóstico</th>
+                <th>Peças</th>
+                <th>Placa</th>
+                <th>Funcionário</th>
+                <th>Valor</th>
                 <th>Ação</th>
             </tr>
         </thead>
         <tbody id="listaNotas"></tbody>
     </table>
     <script src="listarNotas.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
 </body>
 
 </html>
